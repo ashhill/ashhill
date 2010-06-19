@@ -1,0 +1,35 @@
+<head>
+  <%= stylesheet_link_tag 'main' %>
+</head>
+<div>
+  <div class='menu_bar' align='center'>
+    <%=link_to "#{image_tag 'logo.jpg', :valign => 'middle'}" , "/index"%> 
+    <a class='menu_item'>HOME | </a> <a class='menu_item'>LOGS | </a>  <a class='menu_item'>ABOUT ASH HILL | </a>  <a class='menu_item'>CONTACT</a>  
+</div></div>
+<br /><br />
+
+<table align='center'>
+  <tr>
+  <td class='sidebar' valign='top'>
+    <p>
+    <ul>
+      <li>Test
+        <li>Another test
+          </ul>  
+    </p>
+  </td>
+  <td>
+    <%@logs.each do |log|%>
+      <div>
+        <div><%=image_tag 'user_pic.jpg', :style => 'float:left;margin-right:10px;border:1px black solid;'%>
+        <a href='/logs/<%=log.id%>' class='title'><%=log.title%></a><%=link_to "#{image_tag 'edit.jpg', :width => '15px', :height => '15px', :style=> 'margin: 0px 5px 0px 5px;'}", "/logs/edit/#{log.id}" if current_user.id == 1%><%=link_to "#{image_tag 'trash.jpg', :width => '15px', :height => '15px'}", "/logs/destroy/#{log.id}", :confirm => 'Make it so?' if current_user.id == 1%>
+        <p><%=link_to "#{image_tag 'read_on.jpg'}", "/logs/#{log.id}"%> Read On</p>
+        </div>
+        <span class='cite'>Posted by <%=(User.find_by_id(log.user_id)).login%> <%=distance_of_time_in_words_to_now(log.created_at)%> ago</span>
+        <p><%=truncate(sanitize(log.body), :length => 350)%></p>
+        
+      </div>
+    <%end%>
+  </td>
+  </tr>
+</table>

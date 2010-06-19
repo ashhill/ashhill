@@ -1,0 +1,20 @@
+<head>
+  <%= stylesheet_link_tag 'main' %>
+  <%= javascript_include_tag 'ckeditor/ckeditor.js' %>
+</head>
+<% form_for(:log, @log, :url=>{:action=>'create'}, :html=>{:multipart=>true}) do |form| %>
+  <%= form.label :title, 'Title'%>
+  <%= form.text_field :title, :class => 'red' %><br/>
+  <%= form.label :body, 'Body'%>
+  <%= form.text_area :body %><br/>
+  <script type="text/javascript">
+  	CKEDITOR.replace( 'log[body]',
+        {
+            toolbar : 'Basic',
+            uiColor : '#47aa1c',
+            width   : '600px'
+        });
+  </script>
+  <%= submit_tag "Create" %>
+<% end %>
+  

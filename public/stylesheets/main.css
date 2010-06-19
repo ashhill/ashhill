@@ -1,0 +1,55 @@
+h3{
+  font-family: tahoma, arial, helvetica, sans-serif;
+  color: #47aa1c;
+}
+
+p {
+  color: #646c60;
+  font-family: tahoma, arial, helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.cite {
+  color: #777777;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: normal;
+  font-family: "Times New Roman", serif;
+}
+
+.menu_item {
+  text-align:center;
+  width:100px;
+  height:20px;
+  padding-top:3px;
+}
+
+.menu_bar {
+  color:#879282;
+  font-size:14px;
+  font-family: Trebuchet MS, tahoma;
+}
+
+A.title:visited{
+  font-family: tahoma, arial, helvetica, sans-serif;
+  color: #879282;
+  text-decoration:none;
+}
+
+A.title:hover{
+  font-family: tahoma, arial, helvetica, sans-serif;
+  color: #47aa1c;
+  text-decoration:none;
+}
+
+A.title:link{
+  font-family: tahoma, arial, helvetica, sans-serif;
+  color: #47aa1c;
+  text-decoration:none;
+}
+
+td.sidebar{
+  font-family: tahoma, arial, helvetica, sans-serif;
+  font-size: 12px;
+  width: 250px;
+}
