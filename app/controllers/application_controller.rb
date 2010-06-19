@@ -2,6 +2,10 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+  
+  include AuthenticatedSystem
+  # If you want "remember me" functionality, add this before_filter to Application Controller
+  before_filter :login_from_cookie
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
