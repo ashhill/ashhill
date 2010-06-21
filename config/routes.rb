@@ -45,6 +45,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :accounts
   map.connect 'index', :controller=>'logs', :action => 'index'
   map.resources :logs
+  map.root :controller => "logs"
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end
