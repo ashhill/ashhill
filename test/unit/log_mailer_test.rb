@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PostTest < ActionMailer::TestCase
+class LogMailerTest < ActionMailer::TestCase
   # replace this with your real tests
   test "the truth" do
     assert true
