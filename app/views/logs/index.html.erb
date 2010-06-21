@@ -1,14 +1,27 @@
 <head>
   <%= stylesheet_link_tag 'main' %>
 </head>
-<div>
-  <div class='menu_bar' align='center'>
-    <%=link_to "#{image_tag 'logo.jpg', :valign => 'middle'}" , "/index", :border => '0px'%> 
-    <a class='menu_item'>HOME | </a> <a class='menu_item'>LOGS | </a>  <a class='menu_item'>ABOUT ASH HILL | </a>  <a class='menu_item'>CONTACT</a>  
-</div></div>
-<br /><br />
 
-<table align='center'>
+<div align='center'>
+<div class='menu_bar'>
+    <%=link_to "#{image_tag 'logo.jpg', :valign => 'middle'}" , "/index", :border => '0px'%> 
+</div>
+
+<div id="navbar">
+<span class="inbar">
+<ul>
+<li <%="class='navhome'" if controller.controller_name == 'index'%>><a href="index"><span>Home</span></a></li>
+<li <%="class='navhome'" if controller.controller_name == 'logs'%>><a href="logs"><span>Logs</span></a></li>
+<li <%="class='navhome'" if controller.controller_name == 'about'%>><a href="about"><span>About Ash Hill</span></a></li>
+<li <%="class='navhome'" if controller.controller_name == 'contact'%>><a href="contact"><span>Contact</span></a></li>
+</ul>
+</span>
+</div>
+</div>
+
+<br /><br /><br />
+
+<table align='center' style='margin-left:0px;'>
   <tr>
   <td class='sidebar' valign='top'>
     <p>
