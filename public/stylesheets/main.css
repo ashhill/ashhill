@@ -1,3 +1,16 @@
+a:hover {
+  text-decoration:none;
+}
+
+a:visited {
+  text-decoration:none;
+}
+
+a:link {
+  text-decoration:none;
+}
+
+
 h3{
   font-family: tahoma, arial, helvetica, sans-serif;
   color: #47aa1c;
@@ -59,14 +72,14 @@ td.sidebar{
 }
 
 #navbar{
-  width:390px;
-  height:36px;
+  width:340px;
+  height:20px;
   background:url('/images/navbar-bg.png') left top repeat-x; 
 }
 
 #navbar .inbar{
   display:block;
-  height:36px;
+  height:20px;
   background:url('/images/right-round.png') right top no-repeat; 
 }
 
@@ -75,8 +88,8 @@ td.sidebar{
   margin:0px;
   padding:0px;
   list-style:none;
-  height:36px;
-  line-height:36px; } 
+  height:20px;
+  line-height:20px; } 
 
 #navbar ul{
   background:url('/images/left-round.png') left top no-repeat; 
@@ -85,43 +98,44 @@ td.sidebar{
 #navbar ul li{
   float:left;
   display: inline-block;
-  line-height:36px; 
+  line-height:20px; 
 } 
 
 #navbar ul li a{
   color:#403e32;
   text-decoration:none;
   font-family: tahoma, arial, helvetica, sans-serif;
+  font-size:12px;
   display: inline-block; 
 } 
 
 #navbar ul li a span{
   padding:0 20px 0 0;
-  height:36px;
-  line-height:36px;
+  height:20px;
+  line-height:20px;
   display: inline-block;
   margin-left:20px; 
 }
 
 #navbar .navhome a, #navbar .navhome a:hover{
   background:url('/images/a-bg.png') left top no-repeat;
-  height:36px;
-  line-height:36px; 
+  height:20px;
+  line-height:20px; 
 } 
 
 #navbar .navhome a span, #navbar .navhome a:hover span{
   color:#FFFFFF;
   background:url('/images/span-bg.png') right top no-repeat;
-  height:36px;
-  line-height:36px; 
+  height:20px;
+  line-height:20px; 
 } 
 #navbar ul li a:hover{
   background:url('/images/ahover-bg.png') left top no-repeat;
-  height:36px;
-  line-height:36px; 
+  height:20px;
+  line-height:20px; 
 } 
 #navbar ul li a:hover span{
   background:url('/images/spanhover-bg.png') right top no-repeat;
-  height:36px;
-  line-height:36px; 
+  height:20px;
+  line-height:20px; 
 }

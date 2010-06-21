@@ -9,7 +9,12 @@ class LogsController < ApplicationController
   end
   
   def new
-    @log = Log.new
+    unless current_user == :false
+      @log = Log.new
+    else
+      flash[:error] = 'You must login to create a post!'
+      redirect_to '/logs'
+    end
   end
   
   def create

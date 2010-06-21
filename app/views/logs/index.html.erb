@@ -1,3 +1,7 @@
+<div align='center'>
+<%=flash[:error]%>
+</div>
+
 <head>
   <%= stylesheet_link_tag 'main' %>
 </head>
@@ -10,13 +14,15 @@
 <div id="navbar">
 <span class="inbar">
 <ul>
-<li <%="class='navhome'" if controller.controller_name == 'index'%>><a href="index"><span>Home</span></a></li>
-<li <%="class='navhome'" if controller.controller_name == 'logs'%>><a href="logs"><span>Logs</span></a></li>
-<li <%="class='navhome'" if controller.controller_name == 'about'%>><a href="about"><span>About Ash Hill</span></a></li>
-<li <%="class='navhome'" if controller.controller_name == 'contact'%>><a href="contact"><span>Contact</span></a></li>
+<li <%="class='navhome'" if controller.controller_name == 'index'%>><a href="<%#=index_path%>"><span>Home</span></a></li>
+<li <%="class='navhome'" if controller.controller_name == 'logs'%>><a href="<%=logs_path%>"><span>Logs</span></a></li>
+<li <%="class='navhome'" if controller.controller_name == 'about'%>><a href="<%#=about_path%>"><span>About Ash Hill</span></a></li>
+<li <%="class='navhome'" if controller.controller_name == 'contact'%>><a href="<%#=contacts_path%>"><span>Contact</span></a></li>
 </ul>
 </span>
+<span align='right' class='cite' style='display:block;'><%=current_user == :false ? link_to('Login?', '/login') : link_to("Welcome #{current_user.login}, Logout?", '/logout')%></span>
 </div>
+
 </div>
 
 <br /><br /><br />

@@ -19,6 +19,7 @@ class AccountController < ApplicationController
   end
 
   def signup
+    redirect_to logs_path
     @user = User.new(params[:user])
     return unless request.post?
     @user.save!
