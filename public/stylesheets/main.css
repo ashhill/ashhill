@@ -48,6 +48,10 @@ A.title:link{
   text-decoration:none;
 }
 
+a img {
+   border: none;
+}
+
 td.sidebar{
   font-family: tahoma, arial, helvetica, sans-serif;
   font-size: 12px;
