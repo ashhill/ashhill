@@ -1,5 +1,5 @@
 class LogMailer < ActionMailer::Base
-  def new_message_noification(user, log)
+  def new_message_notification(user, log)
     setup_email(user, log)
   end
 
