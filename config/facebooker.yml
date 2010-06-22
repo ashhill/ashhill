@@ -1,0 +1,21 @@
+development:
+ api_key: dba0c015cc7d9717e8c0d38f32313a0c
+ secret_key: 3077611b88be446db170c8117fd97f3b
+ canvas_page_name: ashhill
+ callback_url: http://localhost:3000
+ pretty_errors: true
+ set_asset_host_to_callback_url: true
+
+test:
+  api_key: dba0c015cc7d9717e8c0d38f32313a0c
+  secret_key: 3077611b88be446db170c8117fd97f3b
+  canvas_page_name: ashhill
+  pretty_errors: true
+  set_asset_host_to_callback_url: true
+
+production:
+  api_key: dba0c015cc7d9717e8c0d38f32313a0c
+  secret_key: 3077611b88be446db170c8117fd97f3b
+  canvas_page_name: ashhill
+  pretty_errors: true
+  set_asset_host_to_callback_url: true
