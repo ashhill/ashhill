@@ -2,6 +2,7 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+
   
   include AuthenticatedSystem
   # If you want "remember me" functionality, add this before_filter to Application Controller
@@ -11,4 +12,9 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+  
+
+  
 end
+
+

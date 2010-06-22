@@ -7,7 +7,7 @@ class LogMailer < ActionMailer::Base
   def setup_email(user, log)
     recipients "#{user.email}"
     from      %("#{user.fullname}" <masa.ash@gmail.com>)
-    subject    "[AshHill.ca] #{log.title}"
+    subject    "[ashhill.ca] #{log.title}"
     body       :body => log.body, :current_user => log.user_id, :title => log.title
     content_type "text/html"
     sent_on    Time.now

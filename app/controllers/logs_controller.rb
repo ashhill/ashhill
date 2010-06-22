@@ -1,5 +1,7 @@
 class LogsController < ApplicationController
   
+  require 'facebooker'
+  
   def show
     @log = Log.find(params[:id])
   end
