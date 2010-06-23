@@ -30,6 +30,15 @@ module SMS_Fu
     end
   end
 
+module SMSFu
+  def self.included(base)
+    base.class_eval do
+      def self.has_sms_fu
+        include SMSFu
+      end
+    end
+  end
+
   RAILS_CONFIG_ROOT = defined?(Rails) ?
           Rails.env == 'test' ?
             "#{File.dirname(__FILE__)}/../templates" :
