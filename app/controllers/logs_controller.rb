@@ -21,7 +21,7 @@ class LogsController < ApplicationController
     @log.user_id = current_user.id
     if @log.save
       LogMailer.deliver_new_message_notification(current_user, @log)
-      send_sms
+      send_sms(@log.body, current_user.email)
       redirect_to @log
     else
       render :action => 'new'

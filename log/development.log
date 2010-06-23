@@ -19403,3 +19403,125 @@ Rendering logs/index
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
 Completed in 270ms (View: 208, DB: 23) | 200 OK [http://localhost/logs/]
+DEPRECATION WARNING: require "actionmailer" is deprecated and will be removed in Rails 3. Use require "action_mailer" instead.. (called from /usr/local/lib/ruby/gems/1.8/gems/actionmailer-2.3.5/lib/actionmailer.rb:2)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LogsController#index (for 127.0.0.1 at 2010-06-23 19:59:59) [GET]
+  [4;36;1mUser Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (34.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLog Load (16.3ms)[0m   [0;1mSELECT * FROM `logs` [0m
+  [4;35;1mLog Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `logs`[0m
+Rendering logs/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 507ms (View: 127, DB: 83) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LogsController#index (for 127.0.0.1 at 2010-06-23 20:00:22) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLog Load (0.3ms)[0m   [0;1mSELECT * FROM `logs` [0m
+  [4;35;1mLog Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `logs`[0m
+Rendering logs/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 98ms (View: 64, DB: 3) | 200 OK [http://localhost/logs]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LogsController#new (for 127.0.0.1 at 2010-06-23 20:00:35) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mLog Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `logs`[0m
+Rendering logs/new
+Completed in 71ms (View: 39, DB: 3) | 200 OK [http://localhost/logs/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LogsController#create (for 127.0.0.1 at 2010-06-23 20:00:41) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"iSYKOwLR09uHW65DDFiv1lLL5Sy5GIj50T5XG90ezxI=", "log"=>{"body"=>"<p>\r\n\ttest</p>\r\n", "title"=>"test"}}
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (11.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLog Columns (12.1ms)[0m   [0mSHOW FIELDS FROM `logs`[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mLog Create (0.4ms)[0m   [0mINSERT INTO `logs` (`category`, `created_at`, `title`, `body`, `updated_at`, `users_to_notify`, `user_id`, `status`) VALUES(NULL, '2010-06-23 23:00:41', 'test', '<p>\r\n	test</p>\r\n', '2010-06-23 23:00:41', NULL, 1, NULL)[0m
+  [4;36;1mSQL (54.3ms)[0m   [0;1mCOMMIT[0m
+Sent mail to masa.ash@gmail.com
+
+Date: Wed, 23 Jun 2010 20:00:41 -0300
+From: masa.ash@gmail.com
+To: masa.ash@gmail.com
+Subject: [ashhill.ca] test
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>
+	test</p>
+Sent mail to 9025950365@msg.telus.com
+
+Date: Wed, 23 Jun 2010 20:00:43 -0300
+From: masa.ash@gmail.com
+To: 9025950365@msg.telus.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+<p>
+	test</p>
+Redirected to http://localhost:3000/logs/17
+Completed in 2745ms (DB: 83) | 302 Found [http://localhost/logs]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LogsController#show (for 127.0.0.1 at 2010-06-23 20:00:43) [GET]
+  Parameters: {"id"=>"17"}
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLog Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `logs`[0m
+  [4;36;1mLog Load (0.3ms)[0m   [0;1mSELECT * FROM `logs` WHERE (`logs`.`id` = 17) [0m
+Rendering logs/show
+Completed in 74ms (View: 43, DB: 4) | 200 OK [http://localhost/logs/17]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LogsController#index (for 127.0.0.1 at 2010-06-23 20:01:22) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mLog Load (0.4ms)[0m   [0mSELECT * FROM `logs` [0m
+  [4;36;1mLog Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `logs`[0m
+Rendering logs/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 129ms (View: 88, DB: 4) | 200 OK [http://localhost/logs/]

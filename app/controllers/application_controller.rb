@@ -14,8 +14,8 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
   
-  def send_sms
-    deliver_sms("9025950221","telus-canada","Hey Morgan!", :from => "masa.ash@gmail.com", :title => 'ashhill.ca')
+  def send_sms(body, email)
+    deliver_sms("9025950365","telus-canada", body, :from => email, :subject => 'ashhill.ca')
   end
 end
 
