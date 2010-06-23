@@ -1,5 +1,4 @@
 class LogsController < ApplicationController
-  
   def show
     @log = Log.find(params[:id])
   end
@@ -22,6 +21,7 @@ class LogsController < ApplicationController
     @log.user_id = current_user.id
     if @log.save
       LogMailer.deliver_new_message_notification(current_user, @log)
+      send_sms
       redirect_to @log
     else
       render :action => 'new'
