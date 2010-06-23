@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
   
   def send_sms
-    deliver_sms("9025950365","telus-canada","message", :from => "masa.ash@gmail.com")
+    deliver_sms("9025950221","telus-canada","Hey Morgan!", :from => "masa.ash@gmail.com", :title => 'ashhill.ca')
   end
 end
 
