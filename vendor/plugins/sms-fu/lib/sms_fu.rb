@@ -21,7 +21,7 @@ require 'sms_notifier'
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-module SMSFu
+module SMS_Fu
   def self.included(base)
     base.class_eval do
       def self.has_sms_fu
