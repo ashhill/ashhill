@@ -20597,3 +20597,514 @@ ActionController::RoutingError (No route matches "/photos/thumb/missing.png" wit
   
 
 Rendering /Users/ashhill/rails/ashhill/vendor/plugins/facebooker/templates/layout.erb (200)
+DEPRECATION WARNING: require "actionmailer" is deprecated and will be removed in Rails 3. Use require "action_mailer" instead.. (called from /usr/local/lib/ruby/gems/1.8/gems/actionmailer-2.3.5/lib/actionmailer.rb:2)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LogsController#index (for 127.0.0.1 at 2010-07-06 17:07:49) [GET]
+  [4;36;1mLog Load (0.4ms)[0m   [0;1mSELECT * FROM `logs` [0m
+  [4;35;1mLog Columns (23.3ms)[0m   [0mSHOW FIELDS FROM `logs`[0m
+Rendering logs/index
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `photo' for #<User:0x10330dc80>) on line #38 of app/views/logs/index.html.erb:
+35:   <td>
+36:     <%@logs.each do |log|%>
+37:       <div>
+38:         <div><%=image_tag (User.find_by_id(log.user_id)).photo.url(:thumb), :style => 'float:left;margin-right:10px;border:1px black solid;'  %>
+39:         <a href='/logs/<%=log.id%>' class='title'><%=log.title%></a><%=link_to "#{image_tag 'edit.jpg', :width => '15px', :height => '15px', :style=> 'margin: 0px 5px 0px 5px;'}", "/logs/edit/#{log.id}" if current_user.id == 1%><%=link_to "#{image_tag 'trash.jpg', :width => '15px', :height => '15px'}", "/logs/destroy/#{log.id}", :confirm => 'Make it so?' if current_user.id == 1%>
+40:         <p><%=link_to "#{image_tag 'read_on.jpg'}", "/logs/#{log.id}"%> Read On</p>
+41:         </div>
+
+    app/views/logs/index.html.erb:38
+    app/views/logs/index.html.erb:36:in `each'
+    app/views/logs/index.html.erb:36
+
+Rendered rescues/_trace (154.5ms)
+Rendered rescues/_request_and_response (2.5ms)
+Rendering /Users/ashhill/rails/ashhill/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LogsController#index (for 127.0.0.1 at 2010-07-06 17:07:51) [GET]
+  [4;35;1mLog Load (0.4ms)[0m   [0mSELECT * FROM `logs` [0m
+  [4;36;1mLog Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `logs`[0m
+Rendering logs/index
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `photo' for #<User:0x103413bc0>) on line #38 of app/views/logs/index.html.erb:
+35:   <td>
+36:     <%@logs.each do |log|%>
+37:       <div>
+38:         <div><%=image_tag (User.find_by_id(log.user_id)).photo.url(:thumb), :style => 'float:left;margin-right:10px;border:1px black solid;'  %>
+39:         <a href='/logs/<%=log.id%>' class='title'><%=log.title%></a><%=link_to "#{image_tag 'edit.jpg', :width => '15px', :height => '15px', :style=> 'margin: 0px 5px 0px 5px;'}", "/logs/edit/#{log.id}" if current_user.id == 1%><%=link_to "#{image_tag 'trash.jpg', :width => '15px', :height => '15px'}", "/logs/destroy/#{log.id}", :confirm => 'Make it so?' if current_user.id == 1%>
+40:         <p><%=link_to "#{image_tag 'read_on.jpg'}", "/logs/#{log.id}"%> Read On</p>
+41:         </div>
+
+    app/views/logs/index.html.erb:38
+    app/views/logs/index.html.erb:36:in `each'
+    app/views/logs/index.html.erb:36
+
+Rendered rescues/_trace (81.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering /Users/ashhill/rails/ashhill/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LogsController#index (for 127.0.0.1 at 2010-07-06 17:07:53) [GET]
+  [4;36;1mLog Load (0.4ms)[0m   [0;1mSELECT * FROM `logs` [0m
+  [4;35;1mLog Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `logs`[0m
+Rendering logs/index
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `photo' for #<User:0x1035eb038>) on line #38 of app/views/logs/index.html.erb:
+35:   <td>
+36:     <%@logs.each do |log|%>
+37:       <div>
+38:         <div><%=image_tag (User.find_by_id(log.user_id)).photo.url(:thumb), :style => 'float:left;margin-right:10px;border:1px black solid;'  %>
+39:         <a href='/logs/<%=log.id%>' class='title'><%=log.title%></a><%=link_to "#{image_tag 'edit.jpg', :width => '15px', :height => '15px', :style=> 'margin: 0px 5px 0px 5px;'}", "/logs/edit/#{log.id}" if current_user.id == 1%><%=link_to "#{image_tag 'trash.jpg', :width => '15px', :height => '15px'}", "/logs/destroy/#{log.id}", :confirm => 'Make it so?' if current_user.id == 1%>
+40:         <p><%=link_to "#{image_tag 'read_on.jpg'}", "/logs/#{log.id}"%> Read On</p>
+41:         </div>
+
+    app/views/logs/index.html.erb:38
+    app/views/logs/index.html.erb:36:in `each'
+    app/views/logs/index.html.erb:36
+
+Rendered rescues/_trace (79.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering /Users/ashhill/rails/ashhill/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LogsController#index (for 127.0.0.1 at 2010-07-06 17:08:24) [GET]
+  [4;35;1mLog Load (0.4ms)[0m   [0mSELECT * FROM `logs` [0m
+  [4;36;1mLog Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `logs`[0m
+Rendering logs/index
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `avatar_file_name' for #<User:0x1036e8580>) on line #38 of app/views/logs/index.html.erb:
+35:   <td>
+36:     <%@logs.each do |log|%>
+37:       <div>
+38:         <div><%=image_tag (User.find_by_id(log.user_id)).avatar.url(:thumb), :style => 'float:left;margin-right:10px;border:1px black solid;'  %>
+39:         <a href='/logs/<%=log.id%>' class='title'><%=log.title%></a><%=link_to "#{image_tag 'edit.jpg', :width => '15px', :height => '15px', :style=> 'margin: 0px 5px 0px 5px;'}", "/logs/edit/#{log.id}" if current_user.id == 1%><%=link_to "#{image_tag 'trash.jpg', :width => '15px', :height => '15px'}", "/logs/destroy/#{log.id}", :confirm => 'Make it so?' if current_user.id == 1%>
+40:         <p><%=link_to "#{image_tag 'read_on.jpg'}", "/logs/#{log.id}"%> Read On</p>
+41:         </div>
+
+    app/views/logs/index.html.erb:38
+    app/views/logs/index.html.erb:36:in `each'
+    app/views/logs/index.html.erb:36
+
+Rendered rescues/_trace (82.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering /Users/ashhill/rails/ashhill/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LogsController#index (for 127.0.0.1 at 2010-07-06 17:08:42) [GET]
+  [4;36;1mLog Load (0.4ms)[0m   [0;1mSELECT * FROM `logs` [0m
+  [4;35;1mLog Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `logs`[0m
+Rendering logs/index
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `avatar' for #<User:0x1032303f8>) on line #38 of app/views/logs/index.html.erb:
+35:   <td>
+36:     <%@logs.each do |log|%>
+37:       <div>
+38:         <div><%=image_tag (User.find_by_id(log.user_id)).avatar.url(:thumb), :style => 'float:left;margin-right:10px;border:1px black solid;'  %>
+39:         <a href='/logs/<%=log.id%>' class='title'><%=log.title%></a><%=link_to "#{image_tag 'edit.jpg', :width => '15px', :height => '15px', :style=> 'margin: 0px 5px 0px 5px;'}", "/logs/edit/#{log.id}" if current_user.id == 1%><%=link_to "#{image_tag 'trash.jpg', :width => '15px', :height => '15px'}", "/logs/destroy/#{log.id}", :confirm => 'Make it so?' if current_user.id == 1%>
+40:         <p><%=link_to "#{image_tag 'read_on.jpg'}", "/logs/#{log.id}"%> Read On</p>
+41:         </div>
+
+    app/views/logs/index.html.erb:38
+    app/views/logs/index.html.erb:36:in `each'
+    app/views/logs/index.html.erb:36
+
+Rendered rescues/_trace (165.5ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering /Users/ashhill/rails/ashhill/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LogsController#index (for 127.0.0.1 at 2010-07-06 17:08:43) [GET]
+  [4;35;1mLog Load (0.4ms)[0m   [0mSELECT * FROM `logs` [0m
+  [4;36;1mLog Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `logs`[0m
+Rendering logs/index
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+ActionView::TemplateError (undefined method `avatar' for #<User:0x1034369b8>) on line #38 of app/views/logs/index.html.erb:
+35:   <td>
+36:     <%@logs.each do |log|%>
+37:       <div>
+38:         <div><%=image_tag (User.find_by_id(log.user_id)).avatar.url(:thumb), :style => 'float:left;margin-right:10px;border:1px black solid;'  %>
+39:         <a href='/logs/<%=log.id%>' class='title'><%=log.title%></a><%=link_to "#{image_tag 'edit.jpg', :width => '15px', :height => '15px', :style=> 'margin: 0px 5px 0px 5px;'}", "/logs/edit/#{log.id}" if current_user.id == 1%><%=link_to "#{image_tag 'trash.jpg', :width => '15px', :height => '15px'}", "/logs/destroy/#{log.id}", :confirm => 'Make it so?' if current_user.id == 1%>
+40:         <p><%=link_to "#{image_tag 'read_on.jpg'}", "/logs/#{log.id}"%> Read On</p>
+41:         </div>
+
+    app/views/logs/index.html.erb:38
+    app/views/logs/index.html.erb:36:in `each'
+    app/views/logs/index.html.erb:36
+
+Rendered rescues/_trace (79.9ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering /Users/ashhill/rails/ashhill/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LogsController#index (for 127.0.0.1 at 2010-07-06 17:08:56) [GET]
+  [4;36;1mLog Load (0.4ms)[0m   [0;1mSELECT * FROM `logs` [0m
+  [4;35;1mLog Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `logs`[0m
+Rendering logs/index
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+Completed in 119ms (View: 99, DB: 4) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 17:08:56) [GET]
+
+ActionController::RoutingError (No route matches "/users_files/photos/missing_thumb.jpg" with {:method=>:get, :canvas=>false}):
+  
+
+Rendering /Users/ashhill/rails/ashhill/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 17:08:56) [GET]
+
+ActionController::RoutingError (No route matches "/users_files/photos/2/thumb.png" with {:method=>:get, :canvas=>false}):
+  
+
+Rendering /Users/ashhill/rails/ashhill/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 17:08:56) [GET]
+
+ActionController::RoutingError (No route matches "/users_files/photos/missing_thumb.jpg" with {:method=>:get, :canvas=>false}):
+  
+
+Rendering /Users/ashhill/rails/ashhill/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 17:08:56) [GET]
+
+ActionController::RoutingError (No route matches "/users_files/photos/3/thumb.png" with {:method=>:get, :canvas=>false}):
+  
+
+Rendering /Users/ashhill/rails/ashhill/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountController#signup (for 127.0.0.1 at 2010-07-06 17:09:11) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering account/signup
+Completed in 79ms (View: 58, DB: 2) | 200 OK [http://localhost/signup]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountController#signup (for 127.0.0.1 at 2010-07-06 17:09:22) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"X7I+NTZr4u8+ND045WFCZnku55oOWEsOXs+tzAlNlWA=", "user"=>{"photo"=>#<File:/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/RackMultipart20100706-1310-1eih1ky-0>, "city"=>"", "home_number"=>"", "country"=>"", "postal_code"=>"", "password_confirmation"=>"", "street"=>"", "cell_number"=>"", "password"=>"", "login"=>"gdfgdf", "email"=>""}}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+[paperclip] identify '-format' '%wx%h' '/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/stream,1310,0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/stream,1310,0.jpg[0]' '-resize' '60x' '-crop' '60x60+0+5' '+repage' '/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/stream,1310,0,1310,0.png' 2>/dev/null
+[paperclip] identify '-format' '%wx%h' '/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/stream,1310,0.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/stream,1310,0.jpg[0]' '-resize' '150x' '-crop' '150x150+0+13' '+repage' '/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/stream,1310,0,1310,1.png' 2>/dev/null
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'gdfgdf') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY '') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+Rendering account/signup
+Completed in 687ms (View: 41, DB: 3) | 200 OK [http://localhost/signup]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountController#signup (for 127.0.0.1 at 2010-07-06 17:09:56) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"X7I+NTZr4u8+ND045WFCZnku55oOWEsOXs+tzAlNlWA=", "user"=>{"photo"=>#<File:/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/RackMultipart20100706-1310-u2wek1-0>, "city"=>"here", "home_number"=>"", "country"=>"Canada", "postal_code"=>"", "password_confirmation"=>"1234", "street"=>"", "cell_number"=>"", "password"=>"1234", "login"=>"gdfgdf", "email"=>""}}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+[paperclip] identify '-format' '%wx%h' '/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/stream,1310,1.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/stream,1310,1.jpg[0]' '-resize' '60x' '-crop' '60x60+0+5' '+repage' '/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/stream,1310,1,1310,0.png' 2>/dev/null
+[paperclip] identify '-format' '%wx%h' '/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/stream,1310,1.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/stream,1310,1.jpg[0]' '-resize' '150x' '-crop' '150x150+0+13' '+repage' '/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/stream,1310,1,1310,1.png' 2>/dev/null
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'gdfgdf') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY '') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering account/signup
+Completed in 384ms (View: 24, DB: 3) | 200 OK [http://localhost/signup]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountController#signup (for 127.0.0.1 at 2010-07-06 17:10:13) [POST]
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"X7I+NTZr4u8+ND045WFCZnku55oOWEsOXs+tzAlNlWA=", "user"=>{"photo"=>#<File:/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/RackMultipart20100706-1310-1rlyzat-0>, "city"=>"here", "home_number"=>"", "country"=>"Canada", "postal_code"=>"", "password_confirmation"=>"1234", "street"=>"", "cell_number"=>"", "password"=>"1234", "login"=>"gdfgdf", "email"=>"test@fake.com"}}
+  [4;35;1mUser Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+[paperclip] identify '-format' '%wx%h' '/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/stream,1310,2.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/stream,1310,2.jpg[0]' '-resize' '60x' '-crop' '60x60+0+5' '+repage' '/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/stream,1310,2,1310,0.png' 2>/dev/null
+[paperclip] identify '-format' '%wx%h' '/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/stream,1310,2.jpg[0]' 2>/dev/null
+[paperclip] convert '/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/stream,1310,2.jpg[0]' '-resize' '150x' '-crop' '150x150+0+13' '+repage' '/var/folders/Lc/LchYO5JJGIi8btrz2sy99E+++TI/-Tmp-/stream,1310,2,1310,1.png' 2>/dev/null
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'gdfgdf') LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`email`) = BINARY 'test@fake.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`salt`, `city`, `created_at`, `photo_file_size`, `crypted_password`, `remember_token_expires_at`, `country`, `home_number`, `updated_at`, `postal_code`, `photo_file_name`, `fullname`, `photo_content_type`, `street`, `remember_token`, `cell_number`, `login`, `email`) VALUES('9bc10a1c7dbdbb03955eb6053b369564d009da94', 'here', '2010-07-06 20:10:14', 46228, 'ebdaabcc7a2ed1fe64c62aca3eadbaf80f2afcf8', NULL, 'Canada', '', '2010-07-06 20:10:14', '', 'Kayla and Ash 2.jpg', NULL, 'image/jpeg', '', NULL, '', 'gdfgdf', 'test@fake.com')[0m
+[paperclip] Saving attachments.
+[paperclip] saving /Users/ashhill/rails/ashhill/public/users_files/photos/4/thumb.png
+[paperclip] saving /Users/ashhill/rails/ashhill/public/users_files/photos/4/small.png
+[paperclip] saving /Users/ashhill/rails/ashhill/public/users_files/photos/4/original.jpg
+  [4;36;1mSQL (45.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/logs
+Completed in 315ms (DB: 48) | 302 Found [http://localhost/signup]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LogsController#index (for 127.0.0.1 at 2010-07-06 17:10:14) [GET]
+  [4;35;1mLog Load (0.4ms)[0m   [0mSELECT * FROM `logs` [0m
+  [4;36;1mLog Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `logs`[0m
+Rendering logs/index
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+Completed in 124ms (View: 100, DB: 5) | 200 OK [http://localhost/logs]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 17:10:14) [GET]
+
+ActionController::RoutingError (No route matches "/users_files/photos/missing_thumb.jpg" with {:method=>:get, :canvas=>false}):
+  
+
+Rendering /Users/ashhill/rails/ashhill/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 17:10:14) [GET]
+
+ActionController::RoutingError (No route matches "/users_files/photos/missing_thumb.jpg" with {:method=>:get, :canvas=>false}):
+  
+
+Rendering /Users/ashhill/rails/ashhill/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 17:10:14) [GET]
+
+ActionController::RoutingError (No route matches "/users_files/photos/2/thumb.png" with {:method=>:get, :canvas=>false}):
+  
+
+Rendering /Users/ashhill/rails/ashhill/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 17:10:14) [GET]
+
+ActionController::RoutingError (No route matches "/users_files/photos/3/thumb.png" with {:method=>:get, :canvas=>false}):
+  
+
+Rendering /Users/ashhill/rails/ashhill/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LogsController#new (for 127.0.0.1 at 2010-07-06 17:10:20) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+  [4;35;1mLog Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `logs`[0m
+Rendering logs/new
+Completed in 47ms (View: 17, DB: 4) | 200 OK [http://localhost/logs/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LogsController#create (for 127.0.0.1 at 2010-07-06 17:10:23) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"X7I+NTZr4u8+ND045WFCZnku55oOWEsOXs+tzAlNlWA=", "log"=>{"body"=>"<p>\r\n\tdsfsdfsdfs</p>\r\n", "title"=>"dsg"}}
+  [4;36;1mLog Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `logs`[0m
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mLog Create (0.2ms)[0m   [0;1mINSERT INTO `logs` (`category`, `created_at`, `title`, `body`, `updated_at`, `users_to_notify`, `user_id`, `status`) VALUES(NULL, '2010-07-06 20:10:23', 'dsg', '<p>\r\n	dsfsdfsdfs</p>\r\n', '2010-07-06 20:10:23', NULL, 4, NULL)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Sent mail to test@fake.com
+
+Date: Tue, 6 Jul 2010 17:10:23 -0300
+From: masa.ash@gmail.com
+To: test@fake.com
+Subject: [ashhill.ca] dsg
+Mime-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<p>
+	dsfsdfsdfs</p>
+Sent mail to 9025950365@msg.telus.com
+
+Date: Tue, 6 Jul 2010 17:10:24 -0300
+From: test@fake.com
+To: 9025950365@msg.telus.com
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+<p>
+	dsfsdfsdfs</p>
+Redirected to http://localhost:3000/logs/20
+Completed in 2015ms (DB: 4) | 302 Found [http://localhost/logs]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LogsController#show (for 127.0.0.1 at 2010-07-06 17:10:25) [GET]
+  Parameters: {"id"=>"20"}
+  [4;36;1mLog Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `logs`[0m
+  [4;35;1mLog Load (0.2ms)[0m   [0mSELECT * FROM `logs` WHERE (`logs`.`id` = 20) [0m
+Rendering logs/show
+Completed in 25ms (View: 11, DB: 2) | 200 OK [http://localhost/logs/20]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing LogsController#index (for 127.0.0.1 at 2010-07-06 17:10:27) [GET]
+  [4;36;1mLog Load (0.4ms)[0m   [0;1mSELECT * FROM `logs` [0m
+  [4;35;1mLog Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `logs`[0m
+Rendering logs/index
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 4) LIMIT 1[0m
+Completed in 114ms (View: 93, DB: 4) | 200 OK [http://localhost/logs/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 17:10:27) [GET]
+
+ActionController::RoutingError (No route matches "/users_files/photos/missing_thumb.jpg" with {:method=>:get, :canvas=>false}):
+  
+
+Rendering /Users/ashhill/rails/ashhill/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 17:10:27) [GET]
+
+ActionController::RoutingError (No route matches "/users_files/photos/2/thumb.png" with {:method=>:get, :canvas=>false}):
+  
+
+Rendering /Users/ashhill/rails/ashhill/vendor/plugins/facebooker/templates/layout.erb (200)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-06 17:10:27) [GET]
+
+ActionController::RoutingError (No route matches "/users_files/photos/3/thumb.png" with {:method=>:get, :canvas=>false}):
+  
+
+Rendering /Users/ashhill/rails/ashhill/vendor/plugins/facebooker/templates/layout.erb (200)
