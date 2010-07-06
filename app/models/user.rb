@@ -15,6 +15,11 @@ class User < ActiveRecord::Base
   validates_presence_of     :country
   before_save :encrypt_password
   has_many :logs
+  
+  # Paperclip
+  has_attached_file :photo, :styles => {
+                    :thumb=> "52x52#",
+                    :small  => "150x150>" }
 
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   def self.authenticate(login, password)

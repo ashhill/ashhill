@@ -35,7 +35,7 @@
   <td>
     <%@logs.each do |log|%>
       <div>
-        <div><%=image_tag 'user_pic.jpg', :style => 'float:left;margin-right:10px;border:1px black solid;'%>
+        <div><%=image_tag (User.find_by_id(log.user_id)).photo.url(:thumb), :style => 'float:left;margin-right:10px;border:1px black solid;'  %>
         <a href='/logs/<%=log.id%>' class='title'><%=log.title%></a><%=link_to "#{image_tag 'edit.jpg', :width => '15px', :height => '15px', :style=> 'margin: 0px 5px 0px 5px;'}", "/logs/edit/#{log.id}" if current_user.id == 1%><%=link_to "#{image_tag 'trash.jpg', :width => '15px', :height => '15px'}", "/logs/destroy/#{log.id}", :confirm => 'Make it so?' if current_user.id == 1%>
         <p><%=link_to "#{image_tag 'read_on.jpg'}", "/logs/#{log.id}"%> Read On</p>
         </div>
