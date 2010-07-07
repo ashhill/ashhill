@@ -16,12 +16,6 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
   has_many :logs
   
-  # Paperclip
-  has_attached_file(:photo, 
-                    :styles => { :thumb => ["60x60#", :png], :small => ["150x150#", :png] }, 
-                    :url => "/:class_files/:attachment/:id/:style.:extension",
-                    :path => ":rails_root/public/:class_files/:attachment/:id/:style.:extension",
-                    :default_url => "/:class_files/:attachment/missing_:style.jpg")
 
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   def self.authenticate(login, password)
